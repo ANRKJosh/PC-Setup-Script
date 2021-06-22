@@ -390,7 +390,7 @@ if ($365_Dialog -eq [System.Windows.Forms.DialogResult]::OK) {
     mkdir 'c:\Xuper\ODT\'
     $url = "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11617-33601.exe"
     $output = "c:\xuper\odt\DeployOffice.exe"
-    Invoke-WebRequest -Uri $url -OutFile $output
+    (New-Object Net.WebClient).DownloadFile($url, $output)
     Write-Host 'Done Downloading Microsoft Office Deployment Tool!'
 
     Write-Host 'Creating Office365 Business Retail 32-Bit configuration file'
@@ -440,7 +440,7 @@ if ($365_Dialog -eq [System.Windows.Forms.DialogResult]::OK) {
     mkdir 'c:\Xuper\ODT\'
     $url = "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11617-33601.exe"
     $output = "c:\xuper\odt\DeployOffice.exe"
-    Invoke-WebRequest -Uri $url -OutFile $output
+    (New-Object Net.WebClient).DownloadFile($url, $output)
     Write-Host 'Done Downloading Microsoft Office Deployment Tool!'
 
     Write-Host 'Creating Office365 Business Retail 64-Bit configuration file'
@@ -490,7 +490,7 @@ if ($365_Dialog -eq [System.Windows.Forms.DialogResult]::OK) {
     mkdir 'c:\Xuper\ODT\'
     $url = "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11617-33601.exe"
     $output = "c:\xuper\odt\DeployOffice.exe"
-    Invoke-WebRequest -Uri $url -OutFile $output
+    (New-Object Net.WebClient).DownloadFile($url, $output)
     Write-Host 'Done Downloading Microsoft Office Deployment Tool!'
     Write-Host 'Creating Office365 ProPlus Retail 32-Bit configuration file'
 
@@ -539,7 +539,7 @@ if ($365_Dialog -eq [System.Windows.Forms.DialogResult]::OK) {
     mkdir 'c:\Xuper\ODT\'
     $url = "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_11617-33601.exe"
     $output = "c:\xuper\odt\DeployOffice.exe"
-    Invoke-WebRequest -Uri $url -OutFile $output
+    (New-Object Net.WebClient).DownloadFile($url, $output)
     Write-Host 'Done Downloading Microsoft Office Deployment Tool!'
 
     Write-Host 'Creating Office365 ProPlus Retail 64-Bit configuration file'
