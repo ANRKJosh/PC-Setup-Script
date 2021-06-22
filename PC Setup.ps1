@@ -682,7 +682,7 @@ if ($ProgramInstall -eq 'Yes') {
 $url = "http://ardownload.adobe.com/pub/adobe/reader/win/AcrobatDC/1901220034/AcroRdrDC1901220034_en_US.exe"
 $outpath = "C:\Xuper\AdobeAcrobatDC.exe"
 Write-Host "Downloading Adobe Reader DC..."
-Invoke-WebRequest -Uri $url -OutFile $outpath
+(New-Object Net.WebClient).DownloadFile($url, $outpath)
 Write-Host "Finished Downloading Adobe Reader DC!"
 Start-Sleep -m 500
 Write-Host "Opening & Installing Adobe Reader DC Silently"
@@ -698,7 +698,7 @@ Start-Sleep -m 100
 $url = "https://ninite.com/.net4.8-adoptjava8-adoptjavax11-adoptjavax8-air-chrome-silverlight/ninite.exe"
 $outpath = "c:\Xuper\Ninite.exe"
 Write-Host "Downloading Ninite..."
-Invoke-WebRequest -Uri $url -OutFile $outpath
+(New-Object Net.WebClient).DownloadFile($url, $outpath)
 Write-Host "Finished Downloading Ninite!"
 Start-Sleep -m 500
 Write-Host "Opening Ninite"
@@ -1347,7 +1347,7 @@ if ($adobedownload -contains "y") {
     $outpath = "C:\Xuper\readerdc_uk_xa_crd_install.exe"
     mkdir "c:\Xuper"
     Write-Host "Downloading Adobe Reader DC..."
-    Invoke-WebRequest -Uri $url -OutFile $outpath
+    (New-Object Net.WebClient).DownloadFile($url, $outpath)
     Write-Host "Finished Downloading Adobe Reader DC!"
     Start-Sleep -m 500
     Write-Host "Opening Adobe Reader DC..."
@@ -1369,7 +1369,7 @@ if ($ninitedownload -contains "y") {
     $outpath = "c:\Xuper\Ninite.exe"
     mkdir "c:\Xuper\"
     Write-Host "Downloading Ninite..."
-    Invoke-WebRequest -Uri $url -OutFile $outpath
+    (New-Object Net.WebClient).DownloadFile($url, $outpath)
     Write-Host "Finished Downloading Ninite!"
     Start-Sleep -m 500
     Write-Host "Opening Ninite"
